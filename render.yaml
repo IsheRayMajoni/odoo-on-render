@@ -8,7 +8,13 @@ services:
     envVars:
       - key: HOST
         value: 0.0.0.0
-      - key: DATABASE_URL
-        value: postgresql://odoo_db_8iua_user:A8tTE7TYqRjrwtd5LVUA9lbqGyDQTUbi@dpg-d01hkladbo4c738p70mg-a/odoo_db_8iua
+      - key: PGHOST
+        value: dpg-d01hkladbo4c738p70mg-a
+      - key: PGUSER
+        value: odoo_db_8iua_user
+      - key: PGPASSWORD
+        value: A8tTE7TYqRjrwtd5LVUA9lbqGyDQTUbi
+      - key: PGDATABASE
+        value: odoo_db_8iua
     ports:
       - 8069
