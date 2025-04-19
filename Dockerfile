@@ -1,15 +1,17 @@
-# Use the official Odoo 16 Community image
+# Use the official Odoo 16 Community image
 FROM odoo:16
 
-USER root   # needed to copy files
+# Switch to the root user (the image already defaults to root,
+# but stating it explicitly is fine)
+USER root
 
-# Copy in the custom entry‑point script and make it executable
+# Copy the custom entry‑point script into the image
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
-# Odoo’s web interface listens on 8069
+# Expose Odoo’s HTTP port
 EXPOSE 8069
 
-# Run our script first; it will exec "odoo" with the right DB flags
+# Run our script first; it will exec “odoo”
 ENTRYPOINT ["/entrypoint.sh"]
 CMD ["odoo"]
