@@ -1,4 +1,4 @@
-# Base image: official Odoo 16 Community
+# Official Odoo 16 Community image
 FROM odoo:16
 
 USER root
