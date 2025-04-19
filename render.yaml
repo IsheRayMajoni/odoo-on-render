@@ -9,7 +9,7 @@ services:
       - key: HOST
         value: "0.0.0.0"
       - key: DB_HOST
-        value: dpg-d01hkladbo4c738p70mg-a.render.com   # ← use your full host from Render
+        value: dpg-d01hkladbo4c738p70mg-a.render.com
       - key: DB_PORT
         value: "5432"
       - key: DB_USER
