@@ -6,10 +6,12 @@ services:
     autoDeploy: true
     dockerfilePath: Dockerfile
     envVars:
-      - key: HOST
+      - key: HOST        # make Odoo listen on all IPs
         value: "0.0.0.0"
+
+      # ---- Render Postgres (internal URL) ----
       - key: DB_HOST
-        value: "dpg-d01hkladbo4c738p70mg-a.frankfurt-postgres.render.com"
+        value: "dpg-d01hkladbo4c738p70mg-a"
       - key: DB_PORT
         value: "5432"
       - key: DB_USER
