@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -e
 
-# 1) Generate odoo.conf from Render’s env vars
+# Generate odoo.conf using passed-in env vars
 cat > /etc/odoo/odoo.conf <<EOF
 [options]
 xmlrpc_interface = 0.0.0.0
@@ -13,5 +13,5 @@ db_name        = ${DB_NAME}
 addons_path    = /usr/lib/python3/dist-packages/odoo/addons
 EOF
 
-# 2) Execute whatever command Docker passed in (e.g., "odoo")
+# Exec whatever command was provided (e.g., "odoo")
 exec "$@"
