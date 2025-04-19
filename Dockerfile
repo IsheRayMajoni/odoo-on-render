@@ -2,6 +2,7 @@ FROM odoo:16
 
 USER root
 
+# Copy in our custom entrypoint
 COPY entrypoint.sh /entrypoint.sh
 RUN chmod +x /entrypoint.sh
 
