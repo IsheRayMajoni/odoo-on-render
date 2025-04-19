@@ -6,11 +6,17 @@ services:
     autoDeploy: true
     dockerfilePath: Dockerfile
     envVars:
-      - key: HOST        ; value: "0.0.0.0"
-      - key: DB_HOST     ; value: "dpg-d01hkladbo4c738p70mg-a"
-      - key: DB_PORT     ; value: "5432"
-      - key: DB_USER     ; value: "odoo_db_8iua_user"
-      - key: DB_PASSWORD ; value: "A8tTE7TYqRjrwtd5LVUA9lbqGyDQTUbi"
-      - key: DB_NAME     ; value: "odoo_db_8iua"
+      - key: HOST
+        value: "0.0.0.0"
+      - key: DB_HOST
+        value: "dpg-d01hkladbo4c738p70mg-a"
+      - key: DB_PORT
+        value: "5432"
+      - key: DB_USER
+        value: "odoo_db_8iua_user"
+      - key: DB_PASSWORD
+        value: "A8tTE7TYqRjrwtd5LVUA9lbqGyDQTUbi"
+      - key: DB_NAME
+        value: "odoo_db_8iua"
     ports:
       - 8069
