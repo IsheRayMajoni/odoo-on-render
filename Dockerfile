@@ -1,4 +1,5 @@
-FROM odoo:16                # official Odoo Community image
+# Base image: official Odoo 16 Community
+FROM odoo:16
 
 USER root
 COPY entrypoint.sh /entrypoint.sh
