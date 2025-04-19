@@ -1,14 +1,14 @@
 services:
   - type: web
-    name: odoo-web                       # Service name (any)
-    env: docker                          # Use the Dockerfile above
-    plan: free                           # Render free tier
-    autoDeploy: true                     # Rebuild on every push
+    name: odoo-web
+    env: docker
+    plan: free
+    autoDeploy: true
     dockerfilePath: Dockerfile
     envVars:
-      - key: HOST                        # Makes Odoo listen on all interfaces
+      - key: HOST
         value: "0.0.0.0"
-      - key: DB_HOST                     # FULL host from External DB URL
+      - key: DB_HOST
         value: "dpg-d01hkladbo4c738p70mg-a.frankfurt-postgres.render.com"
       - key: DB_PORT
         value: "5432"
